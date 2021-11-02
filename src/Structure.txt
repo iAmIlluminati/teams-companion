@@ -1,0 +1,181 @@
+Features:
+Forum - CRUD Operations
+Forum - Search (using Tags),Bookmarking
+Event - CRUD Operations
+Event - Notification (through EMail)
+Room - CRUD
+User - CRUD
+
+Events :
+  -Deadline
+  -Calendar Event
+
+Users :
+  - Student
+  - Primary Admin
+  - Admin
+  - Staffs
+  
+
+
+
+Functions:
+Search
+Create
+Edit
+Delete
+Read
+Filters
+Sending EMail (Web Notification)
+Bookmark
+Sidebar
+Infinte Scroll
+Offline Support (web Database)
+Sorting for Viewing Bookmark
+Calander Event Cancel Handling
+Handling Recurring and Non Recurring Events
+Deleting the Cancelled Event (creating View) 
+Cancel Events
+
+
+UI:
+Calendar
+Card 
+Carousel
+Tab Bar (for Bookmark)
+Form 
+Dropdown List
+Toggle
+WYSWYG Editor
+Tags
+Button
+Text Area
+Text Field
+Button
+Date Picker
+Image Picker
+Attachment (In Assignments)
+Image Viewer
+Icon(Font Aweasom)
+
+
+
+Models:
+
+Forum- ID(Auto), Date,Title,Content,UserInfo(ID,Name,Type),TagInfo(ID,Name,Staff)[staff can be empty],RoomInfo(ID, Name),Type, QID (Question ID for Answers)
+Bookmark- ID(ForumID-UserID) ,ForumInfo(ID),UserInfo(ID,Name,Type),Date
+Assignments -ID(Auto),RoomInfo(ID,Name),Due Date,TagInfo(ID,Name,Staff),Topic,Files(optional),PostedDate
+User Assignment-ID(UserID-AssignmentID),UserInfo(ID,Name,Type),AssignmentID,Completed(true/false)  [Completed Acts as Button]
+Tag -ID(Auto),RoomInfo(ID,Name),Name(Subject),Staffs(list)
+Calendar Event-ID(Auto),RoomInfo(ID,Name),Start,End,TagInfo(ID,Name,Staff),Topic,Description,Date,Day,Recurring Event(weekly/onece),Cancel(bool)
+Rooms - ID(Auto),Name
+User - Name,EMail(ID),Profile Pic,RoomInfo(ID,Name), TagsList(list of (ID,Name,Staff)),Type,Phone
+Staff - Email(ID),Name
+Staff Room - ID(RoomID-StaffID),RoomInfo(ID,Name),StaffInfo(ID,Name)
+
+ 
+
+Autofilled :
+
+      Forum - ID,UserInfo,RoomInfo,Type,QID,Date
+      Bookmark-All
+      Assignment-ID,RoomInfo,PostedDate
+      User Assignment-All
+      Tag-ID,RoomInfo
+      Calendar Events-ID,RoomInfo,
+      Rooms-ID
+      User-EMail(ID)
+      Staff-Email(ID),Name
+      Staff Room-All
+
+One Time Fillled (Non Edittable):
+
+
+
+
+Edittable:
+
+      Forum-TagInfo,Content
+      Assignment-DueDate,Topic,Files
+      Tag-Name,Staffs(list)
+      Calendar Events-Start,End,TagInfo,Topic,Description,Date,Recurring Event(weekly/once)
+      Room-Name
+      User-Name,Profile Pic,RoomInfo,TagsList,UserType,Phone
+
+
+
+
+
+Types:
+
+Bool
+String
+Number
+Attachment
+Date
+Time
+List (Static,Dynamic)
+
+
+Form:
+
+-Validate 
+-Edittable
+-Compulsory
+-Hidden
+-Error/Status
+
+
+
+High Level Architecture Component:
+
+-Web Browser
+-React Frontend
+-Firebase
+-App Engine
+-Web Storage (Caching)
+
+
+
+React Componets :
+
+-Theme:Bootstrap
+-Font:Poppins
+-Styling:CSS
+-Icon:React Font Aweasom
+-Animation:Transitions (Slide In/Out)
+-Firebase Client
+-ID Generator(BSON-Object ID)
+-ReachRouter
+-WYSWYG
+-React Date Picker
+-React Time Picker
+-React Device Detector
+-YAML File Reader
+
+
+Dev Tool:
+-GIT
+-VSCode
+-NPM
+-SonarSource
+-Firebase
+-App Engine(GCloud SDK)
+-YAML
+
+
+
+
+Architecture of React Frontend(PWA):
+
+---------------
+Libraries:YAML Reader,Firebase..........
+---------------
+UI : Bootstrap(CSS),Poppin(Font),Font Aweasom(Icon),Animations
+---------------
+React
+---------------
+
+
+
+Form la edit mode and create mode

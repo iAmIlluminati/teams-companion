@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ForumForm from './ForumForm';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ForumForm/>
   </React.StrictMode>,
   document.getElementById('root')
 );
