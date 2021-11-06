@@ -43,7 +43,7 @@ function ForumHomepage() {
   return (
     <>
       <SettingsMenu/>
-      <TabBar/>
+        <TabBar/>
       <div style={pageStyle}>
         
         <Card  {...propSample}/>

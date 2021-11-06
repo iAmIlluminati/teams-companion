@@ -1,14 +1,15 @@
 let tabBarStyle = {
   position: "sticky",
-  top: "0",
+  top: "4.8rem", //calculated from menu css
   backgroundColor: "#F8F8F8",
   color: "black",
   // height: "3.2em",
   fontWeight: "650",
   fontSize: "1.6rem",
   zIndex: "2",
-  boxShadow: "0px 0.5px 2px #C0C0C0",
-  borderBottom:"none"
+  boxShadow: "0px 0.5px #C0C0C0",
+  // borderBottom:"0.1px solid black"
+
 
 }
 let tabStyle = {

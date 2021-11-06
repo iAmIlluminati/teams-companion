@@ -95,6 +95,11 @@ body {
 #outView {
   transition: margin-left 0.5s;
   padding: 16px;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 4.8rem;
 }
 
 @media screen and (max-height: 450px) {
@@ -107,12 +112,13 @@ body {
 }
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   background: black;
   opacity: 0.5;
-  z-index: 3;
+  z-index: 4;
+  height: 100%;
 }

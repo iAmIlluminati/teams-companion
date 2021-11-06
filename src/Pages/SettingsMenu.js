@@ -22,8 +22,12 @@ function SettingsMenu() {
         <a href="#">Clients</a>
         <a href="#">Contact</a>
       </div>
-      <div id="outView">
-        <span onClick={openNav}>&#9776; </span>
+      <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
+        <span onClick={openNav}>
+        <img width="20px" style={{ left:"8vw",top:"5vw",position :"absolute" }} alt="Menu Icon" src="/asserts/img/icons/menu.png" />
+        </span>
+      <div className="smallGap" ></div>
+
       </div>
     </>
   )
