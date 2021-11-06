@@ -1,10 +1,16 @@
 import Card from './Components/Card';
 import Navbar from './Navbar';
+import { useHistory } from 'react-router-dom';
+
 function ForumHomepage() {
   let pageStyle = {
     // backgroundColor: "#BDC581",
     height: "100%",
     minHeight: "100vh",        
+  }
+  let history = useHistory();
+  const redirect = (url) => {
+    history.push(url)
   }
 
   let roundButton = {
@@ -54,7 +60,7 @@ function ForumHomepage() {
         <Card  {...propSample}/>
         <Card  {...propSample} />
       </div>
-      <button type="button" style={roundButton}>
+      <button type="button" style={roundButton} onClick={() => { redirect("/askques") }}>
           <img width="35px" alt="Ask Question" src="/asserts/img/icons/askQues.png" />
       </button>
     </>
