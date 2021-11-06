@@ -24,7 +24,7 @@ function SettingsMenu() {
       </div>
       <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
         <span onClick={openNav}>
-        <img width="20px" style={{ left:"8vw",top:"5vw",position :"fixed" }} alt="Menu Icon" src="/asserts/img/icons/menu.png" />
+        <img width="20px" style={{ left:"1.5rem",top:"1.5rem",position :"fixed" }} alt="Menu Icon" src="/asserts/img/icons/menu.png" />
         </span>
       <div className="smallGap" ></div>
 

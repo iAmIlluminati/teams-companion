@@ -3,10 +3,12 @@ import TabBar from './TabBar';
 import { useHistory } from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
 function ForumHomepage() {
+  document.body.style.backgroundColor = "#FEA47F";
   let pageStyle = {
-    // backgroundColor: "#BDC581",
+    // backgroundColor: "",
     height: "100%",
-    minHeight: "100vh",        
+    minHeight: "100vh",
+    marginTop:"10.5rem"
   }
   let history = useHistory();
   const redirect = (url) => {

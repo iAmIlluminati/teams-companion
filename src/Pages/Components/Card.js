@@ -13,6 +13,7 @@ function QuestionCard(props) {
     textAlign: "left",
     marginTop:"1.3rem",
     position: "relative",
+    color:"#2C3A47"
   }
   let tagProp = {
     text: props.tagText,
