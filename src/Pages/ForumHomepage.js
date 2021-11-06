@@ -1,7 +1,7 @@
 import Card from './Components/Card';
-import Navbar from './Navbar';
+import TabBar from './TabBar';
 import { useHistory } from 'react-router-dom';
-
+import SettingsMenu from './SettingsMenu';
 function ForumHomepage() {
   let pageStyle = {
     // backgroundColor: "#BDC581",
@@ -42,7 +42,8 @@ function ForumHomepage() {
   }
   return (
     <>
-      <Navbar/>
+      <SettingsMenu/>
+      <TabBar/>
       <div style={pageStyle}>
         
         <Card  {...propSample}/>

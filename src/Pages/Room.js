@@ -1,6 +1,11 @@
+import { useHistory } from 'react-router-dom';
 
 function Room() {
   
+  let history = useHistory();
+  const redirect = (url) => {
+    history.push(url)
+  }
   let buttonStyle = {
     textTransform: "none",
     border: "1px black solid",
@@ -19,7 +24,7 @@ function Room() {
     <div className="containerCentered "  style={{ backgroundColor: "#55E6C1" }}>
       <div className="container">
         <div className="row">
-        <a className="btn btn-outline-dark signin" onClick={() => { console.log("Clicking") }} role="button" style={buttonStyle}>
+        <a className="btn btn-outline-dark signin" onClick={() => { redirect("/createroom") }} role="button" style={buttonStyle}>
           <img width="20px" style={{ marginBottom: "3px", marginRight: "5px" }} alt="Create Room Icon" src="/asserts/img/icons/createRoom.png" />
           Create Room
         </a>
@@ -30,7 +35,7 @@ function Room() {
         </div>
 
         <div className="row">
-        <a className="btn btn-outline-dark signin" onClick={() => { console.log("Clicking") }} role="button" style={buttonStyle}>
+        <a className="btn btn-outline-dark signin" onClick={() => { redirect("/joinroom") }} role="button" style={buttonStyle}>
           <img width="20px" style={{ marginBottom: "3px", marginRight: "12px" }} alt="Create Room Icon" src="/asserts/img/icons/joinRoom.png" />
           Join Room
         </a>
