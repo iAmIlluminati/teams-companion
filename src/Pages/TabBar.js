@@ -13,7 +13,7 @@ let tabBarStyle = {
 
 }
 let tabStyle = {
-  width:"50vw"
+  width:"50%"
 }
 function TabBar() {
   let url = window.location.pathname
