@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ForumForm from './ForumForm';
+
+// Import the functions you need from the SDKs you need
+
 ReactDOM.render(
   <React.StrictMode>
-    <ForumForm/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+
+
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.signin:hover {
+  background-color: rgba(170, 168, 168, 0.658);
+  /* box-shadow: 20rem 2rem balck; */
+}
+
+.containerCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.smallGap {
+  margin-top: 1em;
+}

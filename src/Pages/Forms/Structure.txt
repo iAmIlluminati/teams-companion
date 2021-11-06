@@ -62,17 +62,18 @@ Icon(Font Aweasom)
 
 Models:
 
-Forum- ID(Auto), Date,Title,Content,UserInfo(ID,Name,Type),TagInfo(ID,Name,Staff)[staff can be empty],RoomInfo(ID, Name),Type, QID (Question ID for Answers)
+Forum- ID(Auto), Date,Title,Content,UserInfo(ID,Name,Type),TagInfo(ID,Name,Staff)[staff can be empty],RoomInfo(ID, Name),typeFourm, QID (Question ID for Answers)
 Bookmark- ID(ForumID-UserID) ,ForumInfo(ID),UserInfo(ID,Name,Type),Date
 Assignments -ID(Auto),RoomInfo(ID,Name),Due Date,TagInfo(ID,Name,Staff),Topic,Files(optional),PostedDate
 User Assignment-ID(UserID-AssignmentID),UserInfo(ID,Name,Type),AssignmentID,Completed(true/false)  [Completed Acts as Button]
 Tag -ID(Auto),RoomInfo(ID,Name),Name(Subject),Staffs(list)
-Calendar Event-ID(Auto),RoomInfo(ID,Name),Start,End,TagInfo(ID,Name,Staff),Topic,Description,Date,Day,Recurring Event(weekly/onece),Cancel(bool)
 Rooms - ID(Auto),Name
-User - Name,EMail(ID),Profile Pic,RoomInfo(ID,Name), TagsList(list of (ID,Name,Staff)),Type,Phone
+
+User - Name,EMail(ID),Profile Pic,RoomInfo(ID,Name), TagsList(list of (ID,Name,Staff)),Type
 Staff - Email(ID),Name
 Staff Room - ID(RoomID-StaffID),RoomInfo(ID,Name),StaffInfo(ID,Name)
 
+Calendar Event-ID(Auto),RoomInfo(ID,Name),Start,End,TagInfo(ID,Name,Staff),Topic,Description,Date,Day,Recurring Event(weekly/onece),Cancel(bool)
  
 
 Autofilled :
@@ -86,7 +87,7 @@ Autofilled :
       Rooms-ID
       User-EMail(ID)
       Staff-Email(ID),Name
-      Staff Room-All
+      Staff Room-ID, RoomInfo
 
 One Time Fillled (Non Edittable):
 

@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { useForm } from "react-hook-form";
-import WYSIWYG from "./WYSIWYG";
+import QuillEditor from "./QuillEditor";
 import { IonInput, IonItem, IonLabel,IonButton} from '@ionic/react';
 import Dropdown from "./Dropdown";
 function Form(props) {
@@ -14,7 +14,7 @@ function Form(props) {
     {
       switch (view) {
         case "wysiwyg":
-          return (<WYSIWYG title="Question" name={property} key={property}></WYSIWYG>);
+          return (<></>);
         case "text":
           return (
             <IonItem key={property}>

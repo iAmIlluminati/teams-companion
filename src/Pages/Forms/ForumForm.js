@@ -1,6 +1,11 @@
-import Form from "./Form";
+import Form from "./Components/Form";
 import React from "react";
+import { getAuth } from "firebase/auth";
+import {Redirect} from 'react-router-dom';
 function ForumForm() {
+  const auth = getAuth();
+  // if (!auth.currentUser) return <Redirect to='/signin' />
+
   let template = {
     "id": "forum",
     "name": "Forum Table",
