@@ -7,6 +7,7 @@ import Signin from './Pages/Signin';
 import Room from './Pages/Room'
 import ForumHomepage from './Pages/ForumHomepage';
 import Calendar from './Pages/Calendar'
+import AskQues from './Pages/AskQues'
 function App() {
 
   const auth = getAuth();
@@ -20,6 +21,7 @@ function App() {
             <Route exact path='/room' component={Room} />
             <Route exact path="/forum" component={ForumHomepage} />
             <Route exact path="/calendar" component={Calendar}/>
+            <Route exact path="/askques" component={AskQues}/>
           
           </Switch>
         </div>
