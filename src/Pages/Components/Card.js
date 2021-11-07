@@ -2,8 +2,9 @@ import TagGenerator from "./TagGenerator";
 function QuestionCard(props) {
 
   let cardStyle={
-    maxWidth: "30rem",
-    minWidth:"70vw",
+    maxWidth: "55em",
+    // minWidth: "70vm",
+    width:"80%",
     padding: ".6em .7em",
     border: "0.2px solid",
     borderRadius: "5px",

@@ -1,5 +1,6 @@
-import {useState} from 'react'
-function SettingsMenu() {
+import { useState } from 'react'
+import { useHistory } from 'react-router-dom';
+function SettingsMenu(props) {
   let [backdrop,setBackdrop]=useState()
   let oldBg = document.body.style.backgroundColor;
   function openNav() {
@@ -12,6 +13,21 @@ function SettingsMenu() {
     document.body.style.backgroundColor = oldBg;
     setBackdrop(<></>);
   }
+  let history = useHistory();
+  const redirect = (url) => {
+    history.push(url)
+  }
+  let icon = ""
+  let onClkFun=""
+  if (props.type == "menu") {
+     onClkFun = openNav;
+    icon="/asserts/img/icons/menu.png"
+  }
+  else { //only back as of now
+    onClkFun = () => { redirect(props.url) };
+    icon="/asserts/img/icons/back.png"
+
+  }
   return (
     <>
       {backdrop}
@@ -23,8 +39,8 @@ function SettingsMenu() {
         <a href="#">Contact</a>
       </div>
       <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
-        <span onClick={openNav}>
-        <img width="20px" style={{ left:"1.5rem",top:"1.5rem",position :"fixed" }} alt="Menu Icon" src="/asserts/img/icons/menu.png" />
+        <span onClick={onClkFun}>
+        <img width="20px" style={{ left:"1.5rem",top:"1.5rem",position :"fixed" }} alt="NavIcon" src={icon} />
         </span>
       <div className="smallGap" ></div>
 

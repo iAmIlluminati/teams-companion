@@ -28,8 +28,8 @@ function ForumHomepage() {
     alignItems: "center",
     justifyContent:"center",
     position: "sticky",
-    left: "70vw",
-    bottom: "9vh",
+    left: "70%",
+    bottom: "9%",
     boxShadow: "1.5px 1.5px 5px #C0C0C0"
 
   }
@@ -44,7 +44,7 @@ function ForumHomepage() {
   }
   return (
     <>
-      <SettingsMenu/>
+      <SettingsMenu type="menu"/>
         <TabBar/>
       <div style={pageStyle}>
         
