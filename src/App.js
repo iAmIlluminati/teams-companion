@@ -6,6 +6,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Signin from './Pages/Signin';
 import Room from './Pages/Room'
 import ForumHomepage from './Pages/ForumHomepage';
+import Calendar from './Pages/Calendar'
 function App() {
 
   const auth = getAuth();
@@ -17,7 +18,9 @@ function App() {
             <Route exact path='/signin' component={Signin} />
             <Route exact path='/' component={ForumForm} />
             <Route exact path='/room' component={Room} />
-            <Route exact path="/forum" component={ForumHomepage}/>
+            <Route exact path="/forum" component={ForumHomepage} />
+            <Route exact path="/calendar" component={Calendar}/>
+          
           </Switch>
         </div>
       </Router>

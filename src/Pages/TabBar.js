@@ -19,7 +19,7 @@ function TabBar() {
   let url = window.location.pathname
   var cal = ""
   var forum=""
-  if (url = "/forum") {
+  if (url == "/forum") {
     cal = "nav-link";
     forum = "nav-link active";
   }
@@ -31,7 +31,7 @@ function TabBar() {
     <div style={tabBarStyle}>
       <ul className="nav nav-tabs" style={tabBarStyle}>
         <li className={cal} style={tabStyle}>
-          <a  href="/calendar">Calender</a>
+          <a  href="/calendar">Calendar</a>
         </li>
         <li className={forum} style={tabStyle}>
           <a  href="/forum">Forum</a>
