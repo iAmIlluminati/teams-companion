@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 let tabBarStyle = {
   position: "fixed",
-  width: "100%",
+  width: "101%",
   top: "4.55rem", //calculated from menu css
   backgroundColor: "#F8F8F8",
     // height: "3.2em",
