@@ -44,7 +44,7 @@ function ForumHomepage() {
   }
   return (
     <>
-      <SettingsMenu type="menu"/>
+      <SettingsMenu type="menu"  url=""/>
         <TabBar/>
       <div style={pageStyle}>
         

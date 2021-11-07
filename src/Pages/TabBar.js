@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 let tabBarStyle = {
   position: "fixed",
   width: "100%",
@@ -31,11 +33,15 @@ function TabBar() {
     <div style={tabBarStyle}>
       <ul className="nav nav-tabs" style={tabBarStyle}>
         <li className={cal} style={tabStyle}>
-          <a  href="/calendar">Calendar</a>
-        </li>
+          <Link to="/calendar">
+          Calendar
+          </Link>
+        </li> 
         <li className={forum} style={tabStyle}>
-          <a  href="/forum">Forum</a>
-        </li>
+          <Link to="/forum">
+          Forum
+          </Link>
+        </li> 
       </ul>
     </div>
   );
