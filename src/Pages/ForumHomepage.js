@@ -33,14 +33,53 @@ function ForumHomepage() {
     boxShadow: "1.5px 1.5px 5px #C0C0C0"
 
   }
-  let propSample ={
+  let propSample1 ={
     bgColor : "#F8F8F8",
     tagBg : "#182C61",
-    tagText : "Primary",
+    tagText : "Computer Networks",
     tagColor : "white",
-    title: "Computer Networks Assignment on FTP",
-    
-    content : "Sample Content of the Question"
+    title: "TCP Handshake",
+    content : "Did anyone take notes on 3 way and 4 way..."
+  }
+  let propSample2 ={
+    bgColor : "#F8F8F8",
+    tagBg : "#6D214F",
+    tagText : "Compiler",
+    tagColor : "white",
+    title: "Parse Tree",
+    content : "The nodes in the parse tree are computed.."
+  }
+  let propSample3 ={
+    bgColor : "#F8F8F8",
+    tagBg : "#079992",
+    tagText : "Database",
+    tagColor : "white",
+    title: "XML and XSLT",
+    content : "How to link XSL sheet with the XML ?"
+  }
+  let propSample4 ={
+    bgColor : "#F8F8F8",
+    tagBg : "#6D214F",
+    tagText : "Compiler",
+    tagColor : "white",
+    title: "NFA to DFA",
+    content : "The trap state in assigment 1 seems ..."
+  }
+  let propSample5 ={
+    bgColor : "#F8F8F8",
+    tagBg : "#079992",
+    tagText : "Database",
+    tagColor : "white",
+    title: "Connecting MongoDB with PHP",
+    content : "I had issues with connecting Mongo with Composer PHP.."
+  }
+  let propSample6 ={
+    bgColor : "#F8F8F8",
+    tagBg : "#182C61",
+    tagText : "Computer Networks",
+    tagColor : "white",
+    title: "FTP Protocol",
+    content : "What is the header for FTP ? The transaction..."
   }
   return (
     <>
@@ -48,20 +87,12 @@ function ForumHomepage() {
         <TabBar/>
       <div style={pageStyle}>
         
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample}/>
-        <Card  {...propSample} />
+        <Card  {...propSample1}/>
+        <Card  {...propSample2}/>
+        <Card  {...propSample3}/>
+        <Card  {...propSample4}/>
+        <Card  {...propSample5}/>
+        <Card  {...propSample6} />
       </div>
       <button type="button" style={roundButton} onClick={() => { redirect("/askques") }}>
           <img width="35px" alt="Ask Question" src="/asserts/img/icons/askQues.png" />

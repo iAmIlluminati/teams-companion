@@ -33,10 +33,10 @@ function SettingsMenu(props) {
       {backdrop}
       <div id="mySidenav" className="sidenav" style={{ zIndex: "10" }}>
         <a className="closebtn" onClick={closeNav}>&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">Room ID : 1a2De3 </a>
+        <a href="#">Profile</a>
+        <a href="#">Leave Room</a>
+        <a href="#">Signout</a>
       </div>
       <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
         <span onClick={onClkFun}>
