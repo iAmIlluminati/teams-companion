@@ -1,8 +1,9 @@
 import Card from './Components/Card';
-import TabBar from './TabBar';
-import Carousel from 'react-bootstrap/Carousel' 
+import TabBar from './TabBar'
+import graphBar from './Components/barGraph'
+import Carousel from './Components/Carousel'
 
-import { useHistory,Link} from 'react-router-dom';
+//import { useHistory,Link} from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
 let propSample1 ={
     bgColor : "#f7d794",
@@ -12,11 +13,13 @@ let propSample1 ={
     title: "Mini Project on CN with Java",
     content : "Due : 13th Nov"
   }
+
 function Calendar() {
   return (
     <>
       <SettingsMenu type="menu"/>
       <TabBar />
+     
     <br/>
     <br/>
     <br/>
@@ -30,9 +33,10 @@ function Calendar() {
     <br/>
     <br/>
     <br/><br/>
-    <br/>
-    <br/>
-    <br/>
+      <br />
+      
+    <br/><graphBar/>
+      <br />
     <br/>
     <br/><br/>
     <br/>
