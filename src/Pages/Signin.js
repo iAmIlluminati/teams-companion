@@ -1,7 +1,7 @@
 import firebase from '../config/firebase'
 import { GoogleAuthProvider,getAuth, getRedirectResult,signInWithRedirect,setPersistence,inMemoryPersistence} from "firebase/auth";
 import {Redirect} from 'react-router-dom';
-import { doc, getDoc, getFirestore, addDoc, collection } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 function Signin() {
   
   let buttonStyle = {
