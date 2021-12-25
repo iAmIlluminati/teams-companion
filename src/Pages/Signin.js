@@ -1,7 +1,10 @@
 import ImageButton from './Forms/Components/ImageButton';
-import { loginWithGmail,authStatus } from '../config/firebase'
+import { loginWithGmail, authStatus } from '../config/firebase'
+import { useEffect } from 'react';
 function Signin() {
-  authStatus("/calendar")
+  useEffect(() => {
+    authStatus("/calendar");
+  },[])
   function signIn() {
     loginWithGmail("/calendar")
   }

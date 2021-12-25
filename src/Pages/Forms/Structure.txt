@@ -67,9 +67,12 @@ Bookmark- ID(ForumID-UserID) ,ForumInfo(ID),UserInfo(ID,Name,Type),Date
 Assignments -ID(Auto),RoomInfo(ID,Name),Due Date,TagInfo(ID,Name,Staff),Topic,Files(optional),PostedDate
 User Assignment-ID(UserID-AssignmentID),UserInfo(ID,Name,Type),AssignmentID,Completed(true/false)  [Completed Acts as Button]
 Tag -ID(Auto),RoomInfo(ID,Name),Name(Subject),Staffs(list)
-Rooms - ID(Auto),Name
 
+
+Rooms - ID(Auto),Name
 User - Name,EMail(ID),Profile Pic,RoomInfo(ID,Name), TagsList(list of (ID,Name,Staff)),Type
+
+
 Staff - Email(ID),Name
 Staff Room - ID(RoomID-StaffID),RoomInfo(ID,Name),StaffInfo(ID,Name)
 

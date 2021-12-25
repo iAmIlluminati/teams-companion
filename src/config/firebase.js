@@ -4,7 +4,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { Redirect } from 'react-router-dom';
-import { GoogleAuthProvider,getAuth,signInWithRedirect,onAuthStateChanged } from "firebase/auth";
+import { GoogleAuthProvider,getAuth,signInWithRedirect,onAuthStateChanged,signOut } from "firebase/auth";
 import { navigate } from "@reach/router";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -37,16 +37,20 @@ let activeUser="Call Auth"; //used inside login function
 //TODO callback is redundant... instead gofor sending path alone for success login or logged
 //elseby default return to signin
 
-
-const authStatus=(path)=>{
+//if the path isLoggedIn, it redirects to signin only when the user is not set  
+const authStatus=(path)=>{   
   onAuthStateChanged(auth, (user) => {
+ 
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     //const uid = user.uid;
     activeUser = user;
     isUserLogged = true;
-    navigate(path);
+    console.log(window.location.pathname)
+    if (path !=="" && path!==window.location.pathname){
+      navigate(path);
+    }
   }
   else {
     // User is signed out
@@ -76,7 +80,10 @@ const loginWithGmail = (path) => {
   });;
 }
 
-export { loginWithGmail,isUserLogged,activeUser,authStatus };
+function signOutGmail() {
+  signOut(auth).then(()=>authStatus("")).catch(()=>authStatus(""));
+}
+export { loginWithGmail,isUserLogged,activeUser,authStatus ,signOutGmail};
 
 
 

@@ -1,11 +1,10 @@
 import BarGraph from './Components/BarGraph';
 import TabBar from './TabBar'
 import CarouselMaker from './Components/CarouselMaker'
-import {  activeUser } from '../config/firebase'
-
-//import { useHistory,Link} from 'react-router-dom';
+import { authStatus, activeUser } from '../config/firebase'
 import SettingsMenu from './SettingsMenu';
-let propSample1 ={
+import { useEffect } from "react";
+let propSample1 = {
     bgColor : "#f7d794",
     tagBg : "#009432",
     tagText : "Completed",
@@ -13,7 +12,6 @@ let propSample1 ={
     title: "Mini Project on CN with Java",
     content : "Due : 13th Nov"
   }
-
 let BarGraphContainerStyle = {
       height: "100%",
     minHeight: "60vh",
@@ -21,6 +19,9 @@ let BarGraphContainerStyle = {
 }
 console.log("Active User: ", activeUser)
 function Calendar() {
+  useEffect(() =>{
+    authStatus("");
+  },[])
   return (
     <>
       <SettingsMenu type="menu"/>
