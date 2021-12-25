@@ -1,6 +1,6 @@
 import Card from './Components/Card';
 import TabBar from './TabBar';
-import { useHistory } from 'react-router-dom';
+import { navigate } from '@reach/router'
 import SettingsMenu from './SettingsMenu';
 function ForumHomepage() {
   //document.body.style.backgroundColor = "#FEA47F";
@@ -10,11 +10,6 @@ function ForumHomepage() {
     minHeight: "100vh",
     marginTop:"10.5rem"
   }
-  let history = useHistory();
-  const redirect = (url) => {
-    history.push(url)
-  }
-
   let roundButton = {
     width: "6rem",
     height: "6rem",
@@ -94,7 +89,7 @@ function ForumHomepage() {
         <Card  {...propSample5}/>
         <Card  {...propSample6} />
       </div>
-      <button type="button" style={roundButton} onClick={() => { redirect("/askques") }}>
+      <button type="button" style={roundButton} onClick={()=>{navigate("/askques")}}>
           <img width="35px" alt="Ask Question" src="/asserts/img/icons/askQues.png" />
       </button>
     </>

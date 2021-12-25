@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link} from '@reach/router';
 
 let tabBarStyle = {
   position: "fixed",

@@ -1,5 +1,4 @@
 import BarGraph from './Components/BarGraph';
-import Card from './Components/Card';
 import TabBar from './TabBar'
 import CarouselMaker from './Components/CarouselMaker'
 import {  activeUser } from '../config/firebase'
@@ -37,7 +36,6 @@ function Calendar() {
       </div>
       
     <CarouselMaker/>
-      {/* <Card  {...propSample1} /> */}
 
     </>
   )

@@ -1,18 +1,13 @@
 import ImageButton from './Forms/Components/ImageButton';
 import { loginWithGmail, isUserLogged, activeUser,authStatus } from '../config/firebase'
-import { useHistory } from 'react-router-dom';
+import { navigate } from '@reach/router';
 
 function Signin() {
-   let history = useHistory();
-  const redirect = (url) => {
-    history.push(url)
-  }
 
   authStatus((status) => {
      if (status) {
         //TODO login is Success go to calendar page
-        
-        redirect("/calendar");
+        navigate("/calendar")
     }
      else {
        //TODO usually  it redirects to signin page
@@ -23,7 +18,7 @@ function Signin() {
       if (status) {
         //TODO login is Success go to calendar page
         
-        redirect("/calendar");
+        navigate("/calendar");
       }
       else {
         //TODO showlogin failed alert 

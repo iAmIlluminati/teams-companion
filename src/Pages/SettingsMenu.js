@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import { navigate } from '@reach/router';
 
 function SettingsMenu(props) {
   let [backdrop, setBackdrop] = useState()
@@ -14,10 +14,6 @@ function SettingsMenu(props) {
     document.body.style.backgroundColor = oldBg;
     setBackdrop(<></>);
   }
-  let history = useHistory();
-  const redirect = (url) => {
-    history.push(url)
-  }
   let icon = ""
   let onClkFun=""
   if (props.type == "menu") {
@@ -25,7 +21,7 @@ function SettingsMenu(props) {
     icon="/asserts/img/icons/menu.png"
   }
   else { //only back as of now
-    onClkFun = () => { redirect(props.url) };
+    onClkFun = () => { navigate(props.url) };
     icon="/asserts/img/icons/back.png"
 
   }
