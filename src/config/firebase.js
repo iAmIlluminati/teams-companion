@@ -1,8 +1,12 @@
+
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { Redirect } from 'react-router-dom';
 import { GoogleAuthProvider,getAuth,signInWithRedirect,onAuthStateChanged } from "firebase/auth";
-// TODO Add SDKs for Firebase products that you want to use
+import { navigate } from "@reach/router";
+// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -29,11 +33,12 @@ let activeUser="Call Auth"; //used inside login function
 
 
 
+
 //TODO callback is redundant... instead gofor sending path alone for success login or logged
 //elseby default return to signin
 
 
-const authStatus=(callback)=>{
+const authStatus=(path)=>{
   onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
@@ -41,19 +46,20 @@ const authStatus=(callback)=>{
     //const uid = user.uid;
     activeUser = user;
     isUserLogged = true;
-    callback(true);
-    // ...
-  } else {
+    navigate(path);
+  }
+  else {
     // User is signed out
     // ...
     activeUser = null;
     isUserLogged = false;
-    callback(false);
+    navigate("/signin");
+
   }
 });
 }
 
-const loginWithGmail = (callback) => {
+const loginWithGmail = (path) => {
   signInWithRedirect(auth, provider).then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
     //const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -62,12 +68,22 @@ const loginWithGmail = (callback) => {
 
     // The signed-in user info.
     console.log("Result : ", result);
-    authStatus(callback);
+    authStatus(path);
 
   }).catch((error) => {
     console.log("User login-in error :", error)
-    authStatus(callback);
+    //authStatus(callback);
   });;
 }
 
 export { loginWithGmail,isUserLogged,activeUser,authStatus };
+
+
+
+
+
+
+
+
+
+

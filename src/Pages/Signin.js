@@ -1,29 +1,9 @@
 import ImageButton from './Forms/Components/ImageButton';
-import { loginWithGmail, isUserLogged, activeUser,authStatus } from '../config/firebase'
-import { navigate } from '@reach/router';
-
+import { loginWithGmail,authStatus } from '../config/firebase'
 function Signin() {
-
-  authStatus((status) => {
-     if (status) {
-        //TODO login is Success go to calendar page
-        navigate("/calendar")
-    }
-     else {
-       //TODO usually  it redirects to signin page
-    }
-  })
+  authStatus("/calendar")
   function signIn() {
-    loginWithGmail((status) => {
-      if (status) {
-        //TODO login is Success go to calendar page
-        
-        navigate("/calendar");
-      }
-      else {
-        //TODO showlogin failed alert 
-      }
-    })
+    loginWithGmail("/calendar")
   }
  
  
@@ -40,3 +20,4 @@ function Signin() {
   </>)
 }
 export default Signin;
+
