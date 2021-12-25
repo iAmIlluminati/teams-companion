@@ -25,7 +25,7 @@ export default () => {
     width: "84vw",
     marginLeft: "auto",
     marginRight: "auto",
-    height:"50vh"
+    height:"50vh"  //height not working
     
   }
   // Insert Image(selected by user) to quill

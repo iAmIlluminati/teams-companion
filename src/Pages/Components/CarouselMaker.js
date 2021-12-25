@@ -2,7 +2,7 @@ import Card from './Card';
 import React, { useState,useEffect  } from "react";
 
 let propSample1 ={
-    bgColor : "#f7d794",
+    bgColor : "rgb(217 217 217)",
     tagBg : "#009432",
     tagText : "Completed",
     tagColor : "white",

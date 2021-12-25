@@ -13,6 +13,7 @@ function QuestionCard(props) {
     justifyContent: "left",
     textAlign: "left",
     marginTop:"1.3rem",
+    marginBottom:"0.3rem",
     position: "relative",
     color:"#2C3A47"
   }
