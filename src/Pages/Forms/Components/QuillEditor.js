@@ -11,13 +11,14 @@ import 'quill/dist/quill.snow.css'; // Add css for snow theme
 export default () => {
   const modules = {
     toolbar: [
-      ['bold', 'italic', 'underline', 'strike'],
+      ['bold', 'italic', 'underline','strike'],
       ['link', 'image'],
+      [{ list: 'ordered'}, { list: 'bullet' }]
     ],
   };
 
   const placeholder = 'Type the Question';
-  const formats = ['bold', 'italic', 'underline', 'strike'];
+  const formats = ['bold', 'italic', 'link', 'image','underline', 'strike','list'];
   const theme = 'snow';
   const { quill, quillRef } = useQuill({ theme, modules, formats, placeholder });
   
