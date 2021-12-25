@@ -1,4 +1,5 @@
 import { useHistory } from 'react-router-dom';
+import ImageButton from './Forms/Components/ImageButton';
 
 function Room() {
   
@@ -24,10 +25,17 @@ function Room() {
     <div className="containerCentered "  style={{ backgroundColor: "#55E6C1" }}>
       <div className="container">
         <div className="row">
-        <a className="btn btn-outline-dark signin" onClick={() => { redirect("/createroom") }} role="button" style={buttonStyle}>
+        {/* <a className="btn btn-outline-dark signin" onClick={() => { redirect("/createroom") }} role="button" style={buttonStyle}>
           <img width="20px" style={{ marginBottom: "3px", marginRight: "5px" }} alt="Create Room Icon" src="/asserts/img/icons/createRoom.png" />
           Create Room
-        </a>
+        </a> */}
+          
+          <ImageButton alt="Create Room Icon"
+            src="/asserts/img/icons/createRoom.png"
+            text="Create Room"
+            event={() => { redirect("/createroom") }}>  
+          </ImageButton>
+          
         </div>                                                                           
 
         <div className="row" style={{margin:"1vh"}}>
@@ -35,10 +43,17 @@ function Room() {
         </div>
 
         <div className="row">
-        <a className="btn btn-outline-dark signin" onClick={() => { redirect("/joinroom") }} role="button" style={buttonStyle}>
+        {/* <a className="btn btn-outline-dark signin" onClick={() => { redirect("/joinroom") }} role="button" style={buttonStyle}>
           <img width="20px" style={{ marginBottom: "3px", marginRight: "12px" }} alt="Create Room Icon" src="/asserts/img/icons/joinRoom.png" />
           Join Room
-        </a>
+        </a> */}
+          
+          <ImageButton alt="Join Room Icon"
+            src="/asserts/img/icons/joinRoom.png"
+            text="Join Room"
+            event={() => { redirect("/joinroom") }} >  
+          </ImageButton>
+
         </div>
       </div>
     </div>

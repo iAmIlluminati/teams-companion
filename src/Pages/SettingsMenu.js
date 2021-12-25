@@ -4,12 +4,12 @@ function SettingsMenu(props) {
   let [backdrop,setBackdrop]=useState()
   let oldBg = document.body.style.backgroundColor;
   function openNav() {
-    document.getElementById("mySidenav").style.width = "70vw";
+    document.getElementById("mySidenav").style.display = "block";
     setBackdrop(<div className="backdrop"></div>);
   }
 
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.display = "none";
     document.body.style.backgroundColor = oldBg;
     setBackdrop(<></>);
   }
@@ -42,8 +42,7 @@ function SettingsMenu(props) {
         <span onClick={onClkFun}>
         <img width="20px" style={{ left:"1.5rem",top:"1.5rem",position :"fixed" }} alt="NavIcon" src={icon} />
         </span>
-      <div className="smallGap" ></div>
-
+        <div className="smallGap" ></div>
       </div>
     </>
   )

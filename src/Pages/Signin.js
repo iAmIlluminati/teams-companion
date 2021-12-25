@@ -1,4 +1,5 @@
 import firebase from '../config/firebase'
+import ImageButton from './Forms/Components/ImageButton';
 import { GoogleAuthProvider,getAuth, getRedirectResult,signInWithRedirect,setPersistence,inMemoryPersistence} from "firebase/auth";
 import {Redirect} from 'react-router-dom';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
@@ -65,10 +66,11 @@ function Signin() {
     
   return (<>
   <div className="containerCentered" style={{backgroundColor:"#EAB543"}}>
-    <a className="btn btn-outline-dark signin" onClick={GoogleSignIn} role="button" style={buttonStyle}>
+    {/* <a className="btn btn-outline-dark signin" onClick={GoogleSignIn} role="button" style={buttonStyle}>
       <img width="20px" style={{marginBottom:"3px", marginRight:"5px"}} alt="Google sign-in" src="/asserts/img/icons/Google.webp" />
       Signin with Google
-    </a>
+      </a> */}
+      <ImageButton  alt="Google sign-in" src="/asserts/img/icons/Google.webp"  text="Signin with Google" event={GoogleSignIn}></ImageButton>
   </div>
 
   </>)

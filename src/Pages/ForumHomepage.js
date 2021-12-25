@@ -3,7 +3,7 @@ import TabBar from './TabBar';
 import { useHistory } from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
 function ForumHomepage() {
-  document.body.style.backgroundColor = "#FEA47F";
+  //document.body.style.backgroundColor = "#FEA47F";
   let pageStyle = {
     // backgroundColor: "",
     height: "100%",
@@ -34,52 +34,52 @@ function ForumHomepage() {
 
   }
   let propSample1 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#182C61",
     tagText : "Computer Networks",
     tagColor : "white",
     title: "TCP Handshake",
-    content : "Did anyone take notes on 3 way and 4 way..."
+    content : <p className='card-text'>Did anyone take notes on 3 way and 4 way...</p>
   }
   let propSample2 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#6D214F",
     tagText : "Compiler",
     tagColor : "white",
     title: "Parse Tree",
-    content : "The nodes in the parse tree are computed.."
+    content : <p className='card-text'>The nodes in the parse tree are computed..</p>
   }
   let propSample3 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#079992",
     tagText : "Database",
     tagColor : "white",
     title: "XML and XSLT",
-    content : "How to link XSL sheet with the XML ?"
+    content : <p className='card-text'>"How to link XSL sheet with the XML ?"</p>
   }
   let propSample4 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#6D214F",
     tagText : "Compiler",
     tagColor : "white",
     title: "NFA to DFA",
-    content : "The trap state in assigment 1 seems ..."
+    content : <p className='card-text'>The trap state in assigment 1 seems ...</p>
   }
   let propSample5 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#079992",
     tagText : "Database",
     tagColor : "white",
     title: "Connecting MongoDB with PHP",
-    content : "I had issues with connecting Mongo with Composer PHP.."
+    content : <p className='card-text'>I had issues with connecting Mongo with Composer PHP..</p>
   }
   let propSample6 ={
-    bgColor : "#F8F8F8",
+    bgColor : "#ececec",
     tagBg : "#182C61",
     tagText : "Computer Networks",
     tagColor : "white",
     title: "FTP Protocol",
-    content : "What is the header for FTP ? The transaction..."
+    content : <p className='card-text'>What is the header for FTP ? The transaction...</p>
   }
   return (
     <>

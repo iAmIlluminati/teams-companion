@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Redirect,Switch} from 'react-router-dom';
-import ForumForm from './Pages/Forms/ForumForm';
+import RoomForm from './Pages/RoomForm';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Signin from './Pages/Signin';
 import Room from './Pages/Room'
@@ -22,6 +22,7 @@ function App() {
             <Route exact path="/forum" component={ForumHomepage} />
             <Route exact path="/calendar" component={Calendar}/>
             <Route exact path="/askques" component={AskQues}/>
+            <Route exact path="/joinroom" component={RoomForm}/>
           
           </Switch>
         </div>

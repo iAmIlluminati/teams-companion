@@ -1,7 +1,7 @@
+import BarGraph from './Components/BarGraph';
 import Card from './Components/Card';
 import TabBar from './TabBar'
-import graphBar from './Components/barGraph'
-import Carousel from './Components/Carousel'
+import CarouselMaker from './Components/CarouselMaker'
 
 //import { useHistory,Link} from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
@@ -14,37 +14,29 @@ let propSample1 ={
     content : "Due : 13th Nov"
   }
 
+let BarGraphContainerStyle = {
+      height: "100%",
+    minHeight: "60vh",
+    marginTop:"12.5rem"
+}
+
 function Calendar() {
   return (
     <>
       <SettingsMenu type="menu"/>
       <TabBar />
-     
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/><br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/><br/>
-      <br />
       
-    <br/><graphBar/>
-      <br />
-    <br/>
-    <br/><br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-      <Card  {...propSample1}  />
+      <div className="BarGraphContainer" style={BarGraphContainerStyle}>
+        <BarGraph/>
+        <BarGraph/>
+        <BarGraph/>
+        <BarGraph/>
+        <BarGraph/>
+        <BarGraph/>
+      </div>
+      
+    <CarouselMaker/>
+      {/* <Card  {...propSample1} /> */}
 
     </>
   )

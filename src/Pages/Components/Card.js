@@ -6,8 +6,8 @@ function QuestionCard(props) {
     // minWidth: "70vm",
     width:"80%",
     padding: ".6em .7em",
-    border: "0.2px solid",
-    borderRadius: "5px",
+    border: "0.2px 0 solid",
+    borderRadius: "3px",
     margin:"auto",
     backgroundColor: props.bgColor,
     justifyContent: "left",
@@ -28,7 +28,7 @@ function QuestionCard(props) {
           <TagGenerator {...tagProp} />
           <div className="smallGap"></div>
           <h5 className="card-title">{props.title}</h5>
-          <p className="card-text">{props.content}</p>
+          {props.content}
         </div>      
       </div>
     </>

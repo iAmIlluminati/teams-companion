@@ -1,3 +1,60 @@
+/* @font-face {
+  font-family: "GoogleSans";
+  src: url('.\\asserts\\font\\sans.ttf')  format('truetype');
+}
+*{
+  font: "GoogleSans";
+} */
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 15%;
+  background: rgb(175, 175, 175); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150); 
+}
+
+
+
+body{
+    /* disabling text selections */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* disabling bluebox onclick in mobile  */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent; /* transparent with keyword */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* transparent with rgba */
+    -webkit-tap-highlight-color: hsla(0, 0, 0, 0); /* transparent with hsla */
+    -webkit-tap-highlight-color: #00000000; /* transparent with hex with alpha */
+    -webkit-tap-highlight-color: #0000; /* transparent with short hex with alpha */
+
+    background-color: rgb(249, 249, 249);
+}
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }
@@ -49,7 +106,9 @@
   text-align: center;
   min-height: 100vh;
 }
-
+p ,.card-text{
+  font-size: 1rem;
+}
 .smallGap {
   margin-top: 1em;
 }
@@ -72,7 +131,8 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 70vw;
+  display:none;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -83,6 +143,9 @@ body {
   padding-top: 60px;
 }
 
+input:focus, textarea:focus, select:focus{
+        outline: none;
+}
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -94,7 +157,7 @@ body {
 }
 
 .sidenav a:hover {
-  color: #e4e4e4;
+  color: #c9c7c7;
 }
 
 .sidenav .closebtn {
@@ -110,7 +173,7 @@ body {
   padding: 16px;
   background-color: #f8f8f8;
   position: fixed;
-  width: 101%;
+  width: 100%;
   top: 0;
   z-index: 2;
   box-sizing: border-box;
