@@ -1,4 +1,4 @@
-function TextInput(props) {
+function MiniInput(props) {
   let textStyle = {
     width: "70vw",
     fontSize: "2.1rem",
@@ -20,8 +20,8 @@ function TextInput(props) {
   }
   return (
     <>
-    <input type="text" maxlength="10" name={props.name} style={textStyle}></input><br/>
+    <input type="text" maxlength={props.length} name={props.name} style={textStyle} autocomplete="off"></input><br/>
     </>
   )
 }
-export default TextInput;
+export default MiniInput;

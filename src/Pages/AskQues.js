@@ -1,60 +1,18 @@
-import TabBar from './TabBar';
-import { useHistory,Link} from 'react-router-dom';
-import SettingsMenu from './SettingsMenu';
-// import Quill from 'quill/core';
+import React from 'react';
 
-// import ReactQuill from 'react-quill'
-// import 'react-quill/dist/quill.snow.css'
+import { useQuill } from 'react-quilljs';
+// or const { useQuill } = require('react-quilljs');
+
+import 'quill/dist/quill.snow.css'; // Add css for snow theme
+// or import 'quill/dist/quill.bubble.css'; // Add css for bubble theme
+import QuillEditor from './Forms/Components/QuillEditor';
+import SettingsMenu from './SettingsMenu';
 function AskQues() {
-  const modules ={
-    toolbar: {
-      container: [
-        [{'header':'1'},{'header':'2'},{'font':[]}],
-        [{size:[]}],
-        ['bold','italic','underline','strike','blockquote'],
-        [{'list':'ordered'},{'list':'bullet'},
-      {'indent':'-1'},{'indent':'+1'}],
-      ['link','image'],
-      ['clean'],['code-block']
-      ],
-   //  handlers: {
-   //     insertStar: 'insertStar'
-    //  }
-    },
-    clipboard: {
-      matchVisual: false,
-    },
-  };
-  const formats = [
-    "header",
-    "font",
-    "size",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "indent",
-    "link",
-    "image",
-    "color"
-  ];
 
   return (
     <>
-      <SettingsMenu type="back" url="/forum" />
-      {/* <ReactQuill 
-          ref={(el) => this.quill=el}
-          value={this.state.content}
-          onChange={e => this.ocac(e)}
-          theme='snow'
-          modules={this.modules}
-          formats={formats}
-          
-          
-          /> */}
+      {/* <SettingsMenu type="back" url="/forum" /> */}
+      <QuillEditor style={{height:"1000px"}}/>
     </>
   )
 }
