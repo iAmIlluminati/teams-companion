@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom';
+
 function SettingsMenu(props) {
-  let [backdrop,setBackdrop]=useState()
+  let [backdrop, setBackdrop] = useState()
   let oldBg = document.body.style.backgroundColor;
   function openNav() {
     document.getElementById("mySidenav").style.display = "block";
@@ -36,7 +37,7 @@ function SettingsMenu(props) {
         <a href="#">Room ID : 1a2De3 </a>
         <a href="#">Profile</a>
         <a href="#">Leave Room</a>
-        <a href="#">Signout</a>
+        <a>Signout</a>
       </div>
       <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
         <span onClick={onClkFun}>

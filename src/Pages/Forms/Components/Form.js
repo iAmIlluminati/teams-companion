@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 import { useForm } from "react-hook-form";
 import QuillEditor from "./QuillEditor";
-import { IonInput, IonItem, IonLabel,IonButton} from '@ionic/react';
 import Dropdown from "./Dropdown";
 function Form(props) {
   let { register, handleSubmit } = useForm();
@@ -33,12 +32,9 @@ function Form(props) {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         {renderedData}
-        <IonButton mode ="md" expand="block" type="submit">Post Question</IonButton>
-      </form>
+       </form>
     </>
   )
 }
-function onSubmit(values) {
-  console.log("Submit is working");
-}
+
 export default Form;

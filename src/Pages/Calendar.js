@@ -2,6 +2,7 @@ import BarGraph from './Components/BarGraph';
 import Card from './Components/Card';
 import TabBar from './TabBar'
 import CarouselMaker from './Components/CarouselMaker'
+import {  activeUser } from '../config/firebase'
 
 //import { useHistory,Link} from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
@@ -19,7 +20,7 @@ let BarGraphContainerStyle = {
     minHeight: "60vh",
     marginTop:"12.5rem"
 }
-
+console.log("Active User: ", activeUser)
 function Calendar() {
   return (
     <>
