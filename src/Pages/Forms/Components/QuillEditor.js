@@ -12,7 +12,7 @@ export default () => {
   const modules = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
-      ['image'],
+      ['link', 'image'],
     ],
   };
 
