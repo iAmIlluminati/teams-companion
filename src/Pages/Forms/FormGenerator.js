@@ -12,8 +12,18 @@ function FormGenerator(props) {
   }
   let reqModel = FormSchemaFetcher(props.id);
   console.log(reqModel);
+  
+  for (let i = 0; i < reqModel.length; i++){
+    if (reqModel[i].view === "hidden") {
+      continue;
+    }
+    switch (reqModel[i].view) {
+      
+    }
+  }
   return (
     <>
+      
     </>
   )
 }
