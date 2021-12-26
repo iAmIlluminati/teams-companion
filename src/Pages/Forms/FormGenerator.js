@@ -18,7 +18,23 @@ function FormGenerator(props) {
       continue;
     }
     switch (reqModel[i].view) {
+      case '':
+              break;
       
+      case '':
+              break;
+      
+      case '':
+              break;
+      
+      case '':
+              break;
+      
+      case '':
+              break;
+      
+      case '':
+              break;
     }
   }
   return (
