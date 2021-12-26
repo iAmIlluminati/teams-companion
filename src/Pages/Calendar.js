@@ -4,6 +4,9 @@ import CarouselMaker from './Components/CarouselMaker'
 import { authStatus, activeUser } from '../config/firebase'
 import SettingsMenu from './SettingsMenu';
 import { useEffect } from "react";
+import FormGenerator from "./Forms/FormGenerator"
+
+
 let propSample1 = {
     bgColor : "#f7d794",
     tagBg : "#009432",
@@ -35,7 +38,7 @@ function Calendar() {
         <BarGraph/>
         <BarGraph/>
       </div>
-      
+      <FormGenerator id="forum"/>
     <CarouselMaker/>
 
     </>
