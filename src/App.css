@@ -146,8 +146,8 @@ body {
 input:focus, textarea:focus, select:focus{
         outline: none;
 }
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.sidenav li {
+  /* padding: 8px 8px 8px 32px; */
   text-decoration: none;
   font-size: 18px;
   text-align: left;
@@ -156,7 +156,7 @@ input:focus, textarea:focus, select:focus{
   transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidenav li:hover {
   color: #c9c7c7;
 }
 

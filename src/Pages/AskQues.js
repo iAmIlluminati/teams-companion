@@ -7,7 +7,7 @@ import QuillEditor from './Forms/Components/QuillEditor';
 import Toggle from './Forms/Components/Toggle';
 import Checkbox from './Forms/Components/Checkbox';
 import SettingsMenu from './SettingsMenu';
-
+import SubmitButton from './Forms/Components/SubmitButton';
 
 
 import Dropdown from './Forms/Components/Dropdown';
@@ -19,7 +19,8 @@ function AskQues() {
       <SettingsMenu type="back" url="/forum" />
       <DefaultTopGap/>
       <Dropdown />
-      <Checkbox/>
+      <Checkbox />
+      <SubmitButton/>
       <QuillEditor style={{height:"50vh"}}/>
     </>
   )

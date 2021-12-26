@@ -1,13 +1,12 @@
 function MiniInput(props) {
   let textStyle = {
-    width: "70vw",
+    width: "50vw",
     fontSize: "2.1rem",
     textAlign: "center",
     textTransform: "none",
     border: "1px black solid",
     color: "black",
     fontWeight: "500",
-    width: "50vw",
     minWidth: "220px",
     maxWidth:"400px",
     backgroundColor: "white",

@@ -21,7 +21,7 @@ function TabBar() {
   let url = window.location.pathname
   var cal = ""
   var forum=""
-  if (url == "/forum") {
+  if (url === "/forum") {
     cal = "nav-link";
     forum = "nav-link active";
   }

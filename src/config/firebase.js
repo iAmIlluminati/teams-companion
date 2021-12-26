@@ -3,7 +3,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { Redirect } from 'react-router-dom';
 import { GoogleAuthProvider,getAuth,signInWithRedirect,onAuthStateChanged,signOut } from "firebase/auth";
 import { navigate } from "@reach/router";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -47,7 +46,7 @@ const authStatus=(path)=>{
     //const uid = user.uid;
     activeUser = user;
     isUserLogged = true;
-    console.log(window.location.pathname)
+    // console.log(window.location.pathname)
     if (path !=="" && path!==window.location.pathname){
       navigate(path);
     }

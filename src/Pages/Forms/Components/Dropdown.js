@@ -1,5 +1,3 @@
-import { Form } from 'react-bootstrap';
-
 //Placeholder
 //Name
 //Options
@@ -37,19 +35,9 @@ function Dropdown() {
   }
   return (
     <>
-      {/* <input type="text" list={props.name} placeholder={props.placeholder} style={dropdownStyle} />
-      <datalist id={props.name}>
-        {
-          props.options.map(row => {
-            return<option value={row.id}>{row.text}</option>
-          })
-        }
-      </datalist> */}
       <select className={props.name} aria-label={props.name}style={dropdownStyle}>
-          <option value={props.options[0].id} defaultValue>{props.options[0].text}</option>
         {
-          props.options.map((row, index) => {
-            if(index!=0)
+          props.options.map((row) => {
             return<option value={row.id}  key={row.id}>{row.text}</option>
           })
         }

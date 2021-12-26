@@ -1,24 +1,8 @@
-import { useHistory } from 'react-router-dom';
 import ImageButton from './Forms/Components/ImageButton';
-
+import {navigate} from "@reach/router"
 function Room() {
   
-  let history = useHistory();
-  const redirect = (url) => {
-    history.push(url)
-  }
-  let buttonStyle = {
-    textTransform: "none",
-    border: "1px black solid",
-    color: "black",
-    boxShadow: "1px 1px grey",
-    fontWeight: "500",
-    width: "50vw",
-    minWidth: "220px",
-    maxWidth:"400px",
-    backgroundColor:"white"
-    
-  };
+
   
 
   return (<>
@@ -33,7 +17,7 @@ function Room() {
           <ImageButton alt="Create Room Icon"
             src="/asserts/img/icons/createRoom.png"
             text="Create Room"
-            event={() => { redirect("/createroom") }}>  
+            event={() => { navigate("/createroom") }}>  
           </ImageButton>
           
         </div>                                                                           
@@ -51,7 +35,7 @@ function Room() {
           <ImageButton alt="Join Room Icon"
             src="/asserts/img/icons/joinRoom.png"
             text="Join Room"
-            event={() => { redirect("/joinroom") }} >  
+            event={() => { navigate("/joinroom") }} >  
           </ImageButton>
 
         </div>

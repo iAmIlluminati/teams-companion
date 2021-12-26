@@ -16,7 +16,7 @@ function SettingsMenu(props) {
   }
   let icon = ""
   let onClkFun=""
-  if (props.type == "menu") {
+  if (props.type === "menu") {
     onClkFun = openNav;
     icon="/asserts/img/icons/menu.png"
   }
@@ -29,11 +29,13 @@ function SettingsMenu(props) {
     <>
       {backdrop}
       <div id="mySidenav" className="sidenav" style={{ zIndex: "10" }}>
-        <a className="closebtn" onClick={closeNav}>&times;</a>
-        <a href="#">Room ID : 1a2De3 </a>
-        <a href="#">Profile</a>
-        <a href="#">Leave Room</a>
-        <a onClick={signOutGmail}>Signout</a>
+        <ul>
+          <li className="closebtn" onClick={closeNav}>&times;</li>
+          <li>Room ID : 1a2De3 </li>
+          <li>Profile</li>
+          <li>Leave Room</li>
+          <li onClick={signOutGmail}>Signout</li>
+        </ul>
       </div>
       <div id="outView" style={{backgroundColor:"#f8f8f8"}}>
         <span onClick={onClkFun}>

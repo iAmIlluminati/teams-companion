@@ -9,7 +9,7 @@ let propSample1 ={
     title: "Mini Project on CN with Java",
     content : "Due : 13th Nov"
   }
-let prevBtn = {
+let carBtn = {
   outline: "none",
   border: "none",
   // background: 'none',
@@ -17,28 +17,12 @@ let prevBtn = {
   marginTop: "auto",
   marginBottom: "auto",
   marginLeft: "auto",
-  marginRight:"auto",
+  marginRight: "auto",
   fontWeight: "700",
   fontSize: "2rem",
-  padding:"auto auto",
-  justifyText:"center",
+  padding: "auto auto",
+  justifyText: "center",
   borderRadius: "30%",
-}
-let nextBtn = {
-
-  outline: "none",
-  border: "none",
-  // background: 'none',
-  // height: "2.3rem",
-  marginTop: "auto",
-  marginBottom: "auto",
-  marginLeft: "auto",
-  marginRight:"auto",
-  fontWeight: "700",
-  fontSize: "2rem",
-  justifyText:"center",
-  borderRadius: "30%",
-  // borderRadius: "50%",
 }
 let carouselStyle = {
   display: "flex",
@@ -65,9 +49,9 @@ function CarouselMaker() {
   }
   return (
     <div style={carouselStyle}>
-      <a onClick={prevSlide} style={prevBtn}> <img src="/asserts/img/icons/prevImg.png" style={{width:"2rem"}}/></a>
+      <a onClick={prevSlide} style={carBtn}> <img src="/asserts/img/icons/prevImg.png" style={{width:"2rem"}}/></a>
       {activeCard}
-      <a onClick={nextSlide} style={prevBtn}> <img src="/asserts/img/icons/nextImg.png" style={{width:"2rem"}}/> </a>
+      <a onClick={nextSlide} style={carBtn}> <img src="/asserts/img/icons/nextImg.png" style={{width:"2rem"}}/> </a>
     </div>
   )
 }
