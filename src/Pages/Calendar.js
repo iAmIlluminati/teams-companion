@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import FormGenerator from "./Forms/FormGenerator"
 
 
+//TODO Date input
+
 let propSample1 = {
     bgColor : "#f7d794",
     tagBg : "#009432",

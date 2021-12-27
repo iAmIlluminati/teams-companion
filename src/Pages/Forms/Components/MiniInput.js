@@ -1,6 +1,8 @@
+import { Callbacks } from "jquery"
+
 function MiniInput(props) {
   let textStyle = {
-    width: "50vw",
+    // width: "50vw",
     fontSize: "2.1rem",
     textAlign: "center",
     textTransform: "none",
@@ -10,17 +12,27 @@ function MiniInput(props) {
     minWidth: "220px",
     maxWidth:"400px",
     backgroundColor: "white",
-    borderRadius: "4px",
+    borderRadius: "4px 0px 0px 4px",
     height: "6vh",
-      //  display: "block"
-    // margin: "1vh"
-   // boxShadow: "1px 1px grey",
-    
+    flexGrow:"2"
+  }
+  let container = {
+    outline: "none",
+     display:"flex",
+    flexDirection: "row",
+    width:"10vw"
+  }
+  let imageStyle = {
+    // float: "right",
+    outline: "none",
+    height: "6vh",
+
   }
   return (
-    <>
-    <input type="text" maxlength={props.length} name={props.name} style={textStyle} autocomplete="off"></input><br/>
-    </>
+    <div className="" style={container}>
+      <input type="text" maxLength={props.length} name={props.name} style={textStyle} autoComplete="off"></input><br />
+      <img onClick={()=>{props.callback(true)}} src="/asserts/img/icons/enter.png" alt="Submit Button" style={imageStyle}/>
+    </div>
   )
 }
 export default MiniInput;
